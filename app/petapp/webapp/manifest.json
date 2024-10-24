@@ -1,0 +1,187 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "sap.fe.app.petapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.15.2",
+      "toolsId": "a0e8a0a5-69b2-4f14-bf3f-44f0c834dbff"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/processor/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.129.2",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.fe.templates": {},
+        "sap.f": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "sap.fe.app.petapp.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "PetCareList",
+          "target": [
+            "PetCareList"
+          ]
+        },
+        {
+          "pattern": "PetCare({key}):?query:",
+          "name": "PetCareObjectPage",
+          "target": [
+            "PetCareList",
+            "PetCareObjectPage"
+          ]
+        }
+      ],
+      "targets": {
+        "PetCareList": {
+          "type": "Component",
+          "id": "PetCareList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/PetCare",
+              "variantManagement": "Page",
+              "navigation": {
+                "PetCare": {
+                  "detail": {
+                    "route": "PetCareObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "PetCareObjectPage": {
+          "type": "Component",
+          "id": "PetCareObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/PetCare",
+              "sectionLayout": "Page",
+              "controlConfiguration": {
+                "to_PetMedicaL/@com.sap.vocabularies.UI.v1.LineItem#Medical": {
+                  "tableSettings": {
+                    "condensedTableLayout": false,
+                    "enableExport": true,
+                    "enableFullScreen": true,
+                    "selectAll": true,
+                    "selectionLimit": -1,
+                    "type": "ResponsiveTable",
+                    "creationMode": {
+                      "createAtEnd": true,
+                      "inlineCreationRowsHiddenInEditMode": true
+                    },
+                    "personalization": {
+                      "column": true,
+                      "filter": true,
+                      "sort": true
+                    },
+                    "quickVariantSelection": {
+                      "showCounts": true
+                    },
+                    "disableCopyToClipboard": false,
+                    "enablePaste": false
+                  }
+                },
+                "to_PetNutrition/@com.sap.vocabularies.UI.v1.LineItem#Nutrition": {
+                  "tableSettings": {
+                    "condensedTableLayout": false,
+                    "disableCopyToClipboard": false
+                  }
+                }
+              },
+              "content": {
+                "header": {
+                  "anchorBarVisible": true,
+                  "visible": true
+                }
+              },
+              "showRelatedApps": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}
