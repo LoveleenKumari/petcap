@@ -135,45 +135,28 @@
               "editableHeaderContent": false,
               "contextPath": "/PetCare",
               "sectionLayout": "Page",
-              "controlConfiguration": {
-                "to_PetMedicaL/@com.sap.vocabularies.UI.v1.LineItem#Medical": {
-                  "tableSettings": {
-                    "condensedTableLayout": false,
-                    "enableExport": true,
-                    "enableFullScreen": true,
-                    "selectAll": true,
-                    "selectionLimit": -1,
-                    "type": "ResponsiveTable",
-                    "creationMode": {
-                      "createAtEnd": true,
-                      "inlineCreationRowsHiddenInEditMode": true
-                    },
-                    "personalization": {
-                      "column": true,
-                      "filter": true,
-                      "sort": true
-                    },
-                    "quickVariantSelection": {
-                      "showCounts": true
-                    },
-                    "disableCopyToClipboard": false,
-                    "enablePaste": false
-                  }
-                },
-                "to_PetNutrition/@com.sap.vocabularies.UI.v1.LineItem#Nutrition": {
-                  "tableSettings": {
-                    "condensedTableLayout": false,
-                    "disableCopyToClipboard": false
-                  }
-                }
-              },
               "content": {
                 "header": {
                   "anchorBarVisible": true,
                   "visible": true
                 }
               },
-              "showRelatedApps": true
+              "showRelatedApps": true,
+              "controlConfiguration": {
+                "to_PetReminders/@com.sap.vocabularies.UI.v1.LineItem#i18nReminder": {
+                  "tableSettings": {
+                    "condensedTableLayout": false,
+                    "disableCopyToClipboard": false,
+                    "enableExport": true
+                  }
+                },
+                "to_PetMedicaL/@com.sap.vocabularies.UI.v1.LineItem#Medical": {
+                  "tableSettings": {
+                    "disableCopyToClipboard": false,
+                    "enablePaste": false
+                  }
+                }
+              }
             }
           }
         }
