@@ -8,7 +8,9 @@ using {
   sap.fe.cap.petcare.BreedType,
   sap.fe.cap.petcare.PetType,
   sap.fe.cap.petcare.Pet_FoodItemTypes,
-  sap.fe.cap.petcare.Pet_GroomingServiceTypes
+  sap.fe.cap.petcare.Pet_GroomingServiceTypes,
+  sap.fe.cap.petcare.Pet_MedicalServiceTypes,
+  sap.fe.cap.petcare.Pet_MedicalTypes,
 } from './master-data';
 
 namespace sap.fe.cap.petcare;
@@ -69,18 +71,18 @@ entity Pet_Grooming : managed {
 //  Code Lists
 //
 
-entity Pet_MedicalServiceTypes : sap.common.CodeList {
-  key code : String enum {
-        Vaccinations      = 'VA';
-        Deworming         = 'DE';
-        FleaTreatment     = 'FL';
-        RabiesVaccination = 'RA'
-      };
-};
+// entity Pet_MedicalServiceTypes : sap.common.CodeList {
+//   key code : String enum {
+//         Vaccinations      = 'VA';
+//         Deworming         = 'DE';
+//         FleaTreatment     = 'FL';
+//         RabiesVaccination = 'RA'
+//       };
+// };
 
-entity Pet_MedicalTypes : sap.common.CodeList {
-  key code : String enum {
-        Public  = 'PU';
-        Private = 'PR'
-      };
-};
+// entity Pet_MedicalTypes : sap.common.CodeList {
+//   key code : String enum {
+//         Public  = 'PU';
+//         Private = 'PR'
+//       };
+// };

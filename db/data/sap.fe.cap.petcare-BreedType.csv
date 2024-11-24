@@ -1,11 +1,11 @@
-PetCode;BreedCode;Breed
-DO;GS;German Shepherd
-DO;BU;Bulldog
-DO;BE;Beagle
-DO;RO;Rotweiler
-DO;GR;Golden Retreiver
-CA;RA;Ragdoll
-CA;BI;Birman
+PetCode;Breed
+DO;German Shepherd
+BU;Bulldog
+BE;Beagle
+RO;Rotweiler
+GR;Golden Retreiver
+RA;Ragdoll
+BI;Birman
 
 
 

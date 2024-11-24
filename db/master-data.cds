@@ -38,6 +38,17 @@ entity Pet_GroomingServiceTypes : MasterData {
       GroomingService : String(20);
 };
 
+entity Pet_MedicalServiceTypes : MasterData {
+  key MedicalServiceTypeCode : String(2);
+      MedicalServiceType     : String(20);
+};
+
+entity Pet_MedicalTypes : MasterData {
+  key MedicalTypeCode : String(2);
+      MedicalType     : String(20);
+};
+
+
 //
 // Code Lists
 //
