@@ -165,3 +165,6 @@ mta_archives/
 # @cap-js/cds-typer
 @cds-models
 >>>>>>> 77017dc (My first git commit)
+
+# auto generated wildcard
+db/.env

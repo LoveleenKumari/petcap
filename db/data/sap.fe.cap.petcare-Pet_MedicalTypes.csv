@@ -1,3 +1,3 @@
-MedicalTypeCode;MedicalType
-PU;Public
-PR;Private
+MedicalTypeCode,MedicalType
+PU,Public
+PR,Private

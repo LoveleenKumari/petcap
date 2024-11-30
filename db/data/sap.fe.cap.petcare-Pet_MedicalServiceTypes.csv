@@ -1,5 +1,5 @@
-MedicalServiceTypeCode;MedicalServiceType
-VA;Vaccinations;
-DE;Deworming;
-FL;FleaTreatment;
-RA;RabiesVaccination;
+MedicalServiceTypeCode,MedicalServiceType
+VA,Vaccinations
+DE,Deworming
+FL,FleaTreatment
+RA,RabiesVaccination

@@ -1,2 +1,2 @@
-PetID;Name;Gender;DOB;Colour;PetCode;PetPicURL
-1111;Ricky;M;20218-04-03;Brown;DO;https://raw.githubusercontent.com/SAP-samples/fiori-elements-opensap/main/week1/images/airlines/Green-Albatross-logo.png 
+PetID,Name,Gender,DOB,Colour,PetCode,PetPicURL
+1111,Ricky,M,2021-04-03,Brown,DO,https://raw.githubusercontent.com/SAP-samples/fiori-elements-opensap/main/week1/images/airlines/Green-Albatross-logo.png 
